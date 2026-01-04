@@ -441,20 +441,32 @@ const headerHTML = `
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content bg-transparent border-0">
             <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title text-white">
+                    <i class="fas fa-play-circle me-2"></i>Safe City Software Demo
+                </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <div class="demo-video-container mx-auto" style="position: relative; width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #000; border-radius: 16px; overflow: hidden;">
-                    <iframe 
+                <div class="demo-video-container mx-auto" style="position: relative; width: 100%; max-width: 900px; aspect-ratio: 16/9; background: #000; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);">
+                    <video 
                         id="demoVideo"
                         width="100%" 
                         height="100%" 
-                        src="" 
-                        title="Safe City Software Demo - Hindi" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+                        controls
+                        preload="metadata"
+                        poster="img/carousel-1.jpg"
+                        style="border-radius: 16px;">
+                        <source src="" type="video/mp4">
+                        <p style="color: white; text-align: center; padding: 2rem;">
+                            Your browser does not support the video tag. 
+                            <a href="Safe City-Demo.mp4" target="_blank" style="color: #667eea;">Click here to download the video</a>
+                        </p>
+                    </video>
+                    
+                    <!-- Video Overlay Info -->
+                    <div style="position: absolute; bottom: 10px; left: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Safe City Software Demo</strong> - AI-Powered Security Solution by NJ Visiony Hub
+                    </div>
                 </div>
             </div>
         </div>
@@ -934,19 +946,32 @@ window.requestDemo = function() {
     if (modal && video) {
         const bootstrapModal = new bootstrap.Modal(modal);
         
-        // Safe City Hindi Demo Video - Professional AI Security Demo
-        // Replace with actual Safe City demo when ready
-        video.src = 'https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&rel=0&cc_load_policy=1&hl=hi&cc_lang_pref=hi&modestbranding=1&showinfo=0';
+        // Safe City Hindi Demo Video - Local file with autoplay
+        video.src = 'Safe City-Demo.mp4';
+        video.setAttribute('controls', 'true');
+        video.setAttribute('autoplay', 'true');
+        video.setAttribute('muted', 'true'); // Required for autoplay in most browsers
+        video.setAttribute('loop', 'true'); // Loop the video
+        video.setAttribute('preload', 'auto'); // Preload the video
         
         bootstrapModal.show();
         
-        // Clear video when modal closes
+        // Auto-play when modal is shown
+        modal.addEventListener('shown.bs.modal', function() {
+            video.play().catch(function(error) {
+                console.log('Auto-play prevented by browser:', error);
+            });
+        });
+        
+        // Clear video when modal closes and pause playback
         modal.addEventListener('hidden.bs.modal', function() {
+            video.pause();
+            video.currentTime = 0;
             video.src = '';
         });
     } else {
-        // Fallback: Open demo page in new tab
-        window.open('demo-video-placeholder.html', '_blank');
+        // Fallback: Open video directly in new tab
+        window.open('Safe City-Demo.mp4', '_blank');
     }
 };
 

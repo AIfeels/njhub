@@ -772,18 +772,13 @@
 
         // Demo video function
         function playDemo() {
-            const modal = new bootstrap.Modal(document.getElementById('demoModal'));
-            const video = document.getElementById('demoVideo');
-            
-            // Replace with actual Safe City demo video URL
-            video.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0';
-            
-            modal.show();
-            
-            // Clear video when modal closes
-            document.getElementById('demoModal').addEventListener('hidden.bs.modal', function() {
-                video.src = '';
-            });
+            // Use the global requestDemo function from inline-header-footer.js
+            if (typeof requestDemo === 'function') {
+                requestDemo();
+            } else {
+                // Fallback if header not loaded yet
+                window.open('Safe City-Demo.mp4', '_blank');
+            }
         }
 
         // Form submission
