@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test Header Footer Loading</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        
+        .test-content {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .loading-indicator {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include Common Header -->
+    <div id="header-placeholder">
+        <div class="loading-indicator">Loading header...</div>
+    </div>
+
+    <!-- Test Content -->
+    <div class="container">
+        <div class="test-content">
+            <h1>Header Footer Test Page</h1>
+            <p>This page tests if the header and footer are loading correctly.</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header Status</h5>
+                            <p id="header-status" class="card-text">Checking...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Footer Status</h5>
+                            <p id="footer-status" class="card-text">Checking...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <button class="btn btn-primary" onclick="testDemo()">Test Demo Button</button>
+                <button class="btn btn-secondary" onclick="testMobileMenu()">Test Mobile Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Common Footer -->
+    <div id="footer-placeholder">
+        <div class="loading-indicator">Loading footer...</div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Common Components Loader -->
+    <script src="js/common-loader.js"></script>
+    
+    <script>
+        // Test functions
+        function testDemo() {
+            if (typeof requestDemo === 'function') {
+                requestDemo();
+                document.getElementById('header-status').innerHTML = '<span class="text-success">✓ Demo function working</span>';
+            } else {
+                document.getElementById('header-status').innerHTML = '<span class="text-danger">✗ Demo function not found</span>';
+            }
+        }
+        
+        function testMobileMenu() {
+            if (typeof toggleMobileMenu === 'function') {
+                toggleMobileMenu();
+                document.getElementById('header-status').innerHTML = '<span class="text-success">✓ Mobile menu function working</span>';
+            } else {
+                document.getElementById('header-status').innerHTML = '<span class="text-danger">✗ Mobile menu function not found</span>';
+            }
+        }
+        
+        // Check loading status
+        setTimeout(function() {
+            // Check header
+            const header = document.getElementById('modernHeader');
+            if (header) {
+                document.getElementById('header-status').innerHTML = '<span class="text-success">✓ Header loaded successfully</span>';
+            } else {
+                document.getElementById('header-status').innerHTML = '<span class="text-danger">✗ Header failed to load</span>';
+            }
+            
+            // Check footer
+            const footer = document.querySelector('.modern-footer');
+            if (footer) {
+                document.getElementById('footer-status').innerHTML = '<span class="text-success">✓ Footer loaded successfully</span>';
+            } else {
+                document.getElementById('footer-status').innerHTML = '<span class="text-danger">✗ Footer failed to load</span>';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

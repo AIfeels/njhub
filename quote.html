@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>NJ Visiony Hub</title>
+    <title>Request Demo & Quote - Safe City Software | NJ Visiony Hub</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Safe City demo, AI security quote, CCTV analysis pricing, security system consultation, free demo request" name="keywords">
+    <meta content="Request a free demo of Safe City software and get custom quotes for AI-powered security solutions. Experience intelligent CCTV analysis, fire detection, and real-time monitoring." name="description">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NJ Visiony Hub">
+    <meta property="og:title" content="Request Demo & Quote - Safe City Software">
+    <meta property="og:description" content="Request a free demo and custom quote for AI-powered security solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.njvisionyhub.in/quote.html">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,238 +21,727 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Quote Page Styles -->
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 12px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f8fafc;
+            padding-top: 80px;
+        }
+
+        .hero-section {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/quote.jpg') center/cover;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .demo-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .demo-video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            margin: 0 auto 3rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .demo-video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            cursor: pointer;
+            transition: var(--transition);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .demo-video-placeholder:hover {
+            background: linear-gradient(135deg, #334155 0%, #475569 100%);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            margin-bottom: 1rem;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .form-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .form-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #f1f5f9;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: #f8fafc;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background: white;
+        }
+
+        .form-select {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: #f8fafc;
+        }
+
+        .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            background: white;
+        }
+
+        .submit-btn {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefits-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #f1f5f9;
+            text-align: center;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--success-gradient);
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-card h5 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .benefit-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .pricing-preview {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .pricing-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .pricing-header h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4facfe;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pricing-features li i {
+            color: #4facfe;
+            margin-right: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .form-card {
+                padding: 2rem;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
+    <!-- Include Common Header -->
+    <div id="header-placeholder"></div>
 
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5">
-        <div class="row gx-4 d-none d-lg-flex">
-            <div class="col-lg-6 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="fa fa-map-marker-alt text-white"></small>
-                    </div>
-                    <small>C-113 Tigri Extension New Delhi 110062</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="fa fa-envelope-open text-white"></small>
-                    </div>
-                    <small>mjishan736@gmail.com</small>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title" data-aos="fade-up">Request Free Demo & Quote</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Experience Safe City software firsthand and get a custom quote tailored to your security needs. 
+                    See how AI transforms traditional CCTV systems into intelligent security networks.
+                </p>
             </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="fa fa-phone-alt text-white"></small>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Watch Safe City in Action</h2>
+                <p>See how our AI-powered platform revolutionizes security monitoring before requesting your personalized demo</p>
+            </div>
+            
+            <div class="demo-video-container" data-aos="zoom-in">
+                <div class="demo-video-placeholder" onclick="playDemo()">
+                    <div class="play-button pulse">
+                        <i class="fas fa-play"></i>
                     </div>
-                    <small>+91 6396168575</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="far fa-clock text-white"></small>
-                    </div>
-                    <small>24*7 Open</small>
+                    <h4>Safe City Platform Overview</h4>
+                    <p>3-minute product demonstration</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Topbar End -->
+    </section>
 
+    <!-- Demo Request Form -->
+    <section class="form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-card" data-aos="fade-up">
+                        <div class="section-title">
+                            <h2>Request Your Personalized Demo</h2>
+                            <p>Fill out the form below to schedule a live demonstration of Safe City software tailored to your specific requirements</p>
+                        </div>
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h2 class="m-0 text-primary">NJ Visiony Hub</h2>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-4 py-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="project.html" class="nav-item nav-link">Project</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="quote.html" class="dropdown-item active">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Free Quote</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Free Quote</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Quote Start -->
-    <div class="container-fluid bg-light overflow-hidden px-lg-0">
-        <div class="container quote px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.jpg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-                        <h1 class="display-5 mb-5">Free Quote</h1>
-                        <p class="mb-4 pb-2">Smart CCTV, AI tracking, and secure locks—protect your home with intelligent, real-time security powered by cutting-edge technology.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                        <form id="demoForm" onsubmit="submitDemoRequest(event)">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" name="name" required placeholder="Enter your full name">
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Get A Free Quote</button>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Job Title</label>
+                                        <input type="text" class="form-control" name="title" placeholder="e.g., Security Manager, IT Director">
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" name="email" required placeholder="Enter your business email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" name="phone" required placeholder="Enter your phone number">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Company/Organization *</label>
+                                        <input type="text" class="form-control" name="company" required placeholder="Enter company name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Industry</label>
+                                        <select class="form-select" name="industry">
+                                            <option value="">Select industry</option>
+                                            <option value="retail">Retail & Shopping Centers</option>
+                                            <option value="manufacturing">Manufacturing</option>
+                                            <option value="healthcare">Healthcare</option>
+                                            <option value="education">Education</option>
+                                            <option value="government">Government</option>
+                                            <option value="hospitality">Hospitality</option>
+                                            <option value="transportation">Transportation</option>
+                                            <option value="residential">Residential</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Number of Cameras</label>
+                                        <select class="form-select" name="cameras">
+                                            <option value="">Select range</option>
+                                            <option value="1-5">1-5 cameras</option>
+                                            <option value="6-20">6-20 cameras</option>
+                                            <option value="21-50">21-50 cameras</option>
+                                            <option value="51-100">51-100 cameras</option>
+                                            <option value="100+">100+ cameras</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Preferred Demo Type</label>
+                                        <select class="form-select" name="demo_type">
+                                            <option value="">Select demo type</option>
+                                            <option value="online">Online Demo (Video Call)</option>
+                                            <option value="onsite">On-site Demo</option>
+                                            <option value="trial">Free Trial Access</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Services of Interest</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services[]" value="safe-city" id="safe-city">
+                                            <label class="form-check-label" for="safe-city">Safe City Platform</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services[]" value="fire-detection" id="fire-detection">
+                                            <label class="form-check-label" for="fire-detection">Fire Detection</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services[]" value="object-recognition" id="object-recognition">
+                                            <label class="form-check-label" for="object-recognition">Object Recognition</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services[]" value="integration" id="integration">
+                                            <label class="form-check-label" for="integration">System Integration</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services[]" value="compliance" id="compliance">
+                                            <label class="form-check-label" for="compliance">Compliance Monitoring</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services[]" value="mobile" id="mobile">
+                                            <label class="form-check-label" for="mobile">Mobile Monitoring</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Current Security Challenges</label>
+                                <textarea class="form-control" name="challenges" rows="4" placeholder="Describe your current security setup and main challenges you're facing..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Preferred Demo Date & Time</label>
+                                <textarea class="form-control" name="preferred_time" rows="2" placeholder="Let us know your preferred dates and times for the demo (we'll confirm availability)"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="quote" name="quote">
+                                    <label class="form-check-label" for="quote">
+                                        I would also like to receive a custom quote based on my requirements
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-calendar-check me-2"></i>Schedule Demo & Request Quote
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Quote End -->
-        
+    </section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-secondary footer py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>C-113 Tigri Extension New Delhi 110062</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 639 616 8575</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mjishan736@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Business Security</a>
-                    <a class="btn btn-link" href="">Fire Detection</a>
-                    <a class="btn btn-link" href="">Alarm Systems</a>
-                    <a class="btn btn-link" href="">CCTV & Video</a>
-                    <a class="btn btn-link" href="">Smart Home</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>We are coming next Gen AI ML based security system in India</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid py-4" style="background: #000000;">
+    <!-- Benefits Section -->
+    <section class="benefits-section">
         <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Why Choose Our Demo?</h2>
+                <p>Experience the full power of Safe City software with our comprehensive demonstration</p>
+            </div>
+
             <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">NJ Visiony Hub</a>, All Right Reserved.
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h5>Live AI Analysis</h5>
+                        <p>See real-time AI-powered threat detection and analysis in action with your own CCTV footage</p>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://vigilanceops.com">VigilanceOps Infotech</a>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5>Custom Configuration</h5>
+                        <p>Experience how Safe City can be tailored to your specific security requirements and infrastructure</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5>Expert Consultation</h5>
+                        <p>Get personalized advice from our security experts on optimizing your current setup</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5>Mobile Experience</h5>
+                        <p>Test the mobile app and see how you can monitor your security from anywhere</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>ROI Analysis</h5>
+                        <p>Understand the cost savings and efficiency gains Safe City can bring to your organization</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5>No Obligation</h5>
+                        <p>Free demonstration with no strings attached - make an informed decision at your own pace</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="pricing-preview">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 style="color: white;">Transparent Pricing</h2>
+                <p style="color: rgba(255,255,255,0.8);">Flexible subscription plans designed to fit organizations of all sizes</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4>Starter</h4>
+                            <div class="pricing-price">₹5,000</div>
+                            <div class="pricing-period">per month</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Up to 5 cameras</li>
+                            <li><i class="fas fa-check"></i> Basic AI analysis</li>
+                            <li><i class="fas fa-check"></i> WhatsApp alerts</li>
+                            <li><i class="fas fa-check"></i> Mobile app</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4>Professional</h4>
+                            <div class="pricing-price">₹15,000</div>
+                            <div class="pricing-period">per month</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Up to 20 cameras</li>
+                            <li><i class="fas fa-check"></i> Advanced AI features</li>
+                            <li><i class="fas fa-check"></i> Fire detection</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h4>Enterprise</h4>
+                            <div class="pricing-price">Custom</div>
+                            <div class="pricing-period">pricing</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited cameras</li>
+                            <li><i class="fas fa-check"></i> Full platform access</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Dedicated support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Common Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Demo Video Modal -->
+    <div class="modal fade" id="demoModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white">Safe City Software Demo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="demo-video-container">
+                        <iframe 
+                            id="demoVideo"
+                            width="100%" 
+                            height="100%" 
+                            src="" 
+                            title="Safe City Software Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Copyright End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -257,9 +753,78 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+    
+    <!-- Common Components Loader -->
+    <script src="js/inline-header-footer.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
 
+        // Demo video function
+        function playDemo() {
+            const modal = new bootstrap.Modal(document.getElementById('demoModal'));
+            const video = document.getElementById('demoVideo');
+            
+            // Replace with actual Safe City demo video URL
+            video.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0';
+            
+            modal.show();
+            
+            // Clear video when modal closes
+            document.getElementById('demoModal').addEventListener('hidden.bs.modal', function() {
+                video.src = '';
+            });
+        }
+
+        // Form submission
+        function submitDemoRequest(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Collect checkbox values
+            const services = [];
+            document.querySelectorAll('input[name="services[]"]:checked').forEach(checkbox => {
+                services.push(checkbox.value);
+            });
+            data.services = services;
+            
+            // Here you would typically send the data to your backend
+            console.log('Demo request submitted:', data);
+            
+            // Show success message
+            alert('Thank you for your demo request! Our team will contact you within 24 hours to schedule your personalized demonstration.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Form validation and enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('demoForm');
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (!this.value.trim()) {
+                        this.style.borderColor = '#f56565';
+                    } else {
+                        this.style.borderColor = '#48bb78';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Safe City Software - AI-Powered Security Platform | NJ Visiony Hub</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Safe City software, AI security platform, CCTV analysis, smart city security, fire detection, object recognition, RTSP integration" name="keywords">
+    <meta content="Safe City - Revolutionary AI-powered security platform for intelligent CCTV analysis, fire detection, object recognition, and real-time threat monitoring with instant WhatsApp/Email alerts." name="description">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NJ Visiony Hub">
+    <meta property="og:title" content="Safe City Software - AI-Powered Security Platform">
+    <meta property="og:description" content="Revolutionary AI-powered security platform for intelligent CCTV analysis">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.njvisionyhub.in/safe-city.html">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Safe City Styles -->
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 12px 40px rgba(0, 0, 0, 0.15);
+            --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.2);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f8fafc;
+            padding-top: 80px;
+        }
+
+        .hero-section {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/carousel-3.jpg') center/cover;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .modern-btn {
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modern-btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .modern-btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        .modern-btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid white;
+        }
+
+        .modern-btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .demo-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .demo-video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .demo-video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            cursor: pointer;
+            transition: var(--transition);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .demo-video-placeholder:hover {
+            background: linear-gradient(135deg, #334155 0%, #475569 100%);
+        }
+
+        .play-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            margin-bottom: 1rem;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .features-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid #f1f5f9;
+            height: 100%;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-gradient);
+            color: white;
+            font-size: 32px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .tech-specs-section {
+            padding: 4rem 0;
+            background: var(--dark-gradient);
+            color: white;
+        }
+
+        .spec-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        .spec-card h5 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #4facfe;
+        }
+
+        .spec-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .spec-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .spec-list li i {
+            color: #4facfe;
+            margin-right: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .integration-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .integration-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #f1f5f9;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .integration-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .integration-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--success-gradient);
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 1rem;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--primary-gradient);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .modern-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .feature-card {
+                padding: 2rem;
+            }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include Common Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="container">
+                <div class="floating">
+                    <i class="fas fa-city" style="font-size: 4rem; margin-bottom: 2rem; opacity: 0.8;"></i>
+                </div>
+                <h1 class="hero-title" data-aos="fade-up">Safe City Software</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Revolutionary AI-powered security platform that transforms traditional CCTV systems into intelligent security networks. 
+                    Experience real-time threat detection, fire monitoring, object recognition, and instant alerts.
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <button class="modern-btn modern-btn-secondary" onclick="scrollToDemo()">
+                        <i class="fas fa-play"></i>Watch Demo
+                    </button>
+                    <a href="quote.html" class="modern-btn modern-btn-primary">
+                        <i class="fas fa-rocket"></i>Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="demo-section" id="demo-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Safe City Software Demo</h2>
+                <p>See how our AI-powered platform revolutionizes security monitoring and threat detection in real-time</p>
+            </div>
+            
+            <div class="demo-video-container" data-aos="zoom-in">
+                <div class="demo-video-placeholder" onclick="playDemo()">
+                    <div class="play-button pulse">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h4>Safe City Platform Demo</h4>
+                    <p>Watch how AI transforms security monitoring</p>
+                    <small style="opacity: 0.7;">Click to play demo video</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Key Features</h2>
+                <p>Comprehensive AI-powered security capabilities designed for modern security challenges</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>AI-Powered Analysis</h4>
+                        <p>Advanced machine learning algorithms analyze CCTV footage in real-time, detecting threats, monitoring compliance, and providing intelligent insights for proactive security management.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>Fire Detection</h4>
+                        <p>Instant fire and smoke detection with 99.5% accuracy. Immediate WhatsApp and Email alerts with video evidence enable rapid response to prevent damage and ensure safety.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Object Recognition</h4>
+                        <p>Intelligent object detection and classification system that identifies unauthorized items, weapons, vehicles, and suspicious activities with advanced computer vision technology.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Monitoring</h4>
+                        <p>Access your security dashboard anywhere with our mobile app. Real-time monitoring, instant notifications, and complete control from your smartphone or tablet.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h4>Instant Alerts</h4>
+                        <p>Real-time notifications via WhatsApp, Email, and mobile push notifications. Receive video clips and detailed incident reports for immediate response and evidence collection.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Analytics Dashboard</h4>
+                        <p>Comprehensive analytics and reporting with customizable dashboards. Track security metrics, generate compliance reports, and gain insights into security patterns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="tech-specs-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 style="color: white;">Technical Specifications</h2>
+                <p style="color: rgba(255,255,255,0.8);">Advanced technology stack powering Safe City's intelligent security platform</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="spec-card">
+                        <h5>AI & Machine Learning</h5>
+                        <ul class="spec-list">
+                            <li><i class="fas fa-check"></i> Deep Learning Neural Networks</li>
+                            <li><i class="fas fa-check"></i> Computer Vision Algorithms</li>
+                            <li><i class="fas fa-check"></i> Real-time Object Detection</li>
+                            <li><i class="fas fa-check"></i> Behavioral Pattern Analysis</li>
+                            <li><i class="fas fa-check"></i> Edge Computing Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="spec-card">
+                        <h5>Integration & Compatibility</h5>
+                        <ul class="spec-list">
+                            <li><i class="fas fa-check"></i> RTSP Protocol Support</li>
+                            <li><i class="fas fa-check"></i> RESTful API Integration</li>
+                            <li><i class="fas fa-check"></i> Cloud & On-Premise Deployment</li>
+                            <li><i class="fas fa-check"></i> Multi-Camera Management</li>
+                            <li><i class="fas fa-check"></i> Legacy System Integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="spec-card">
+                        <h5>Performance & Scalability</h5>
+                        <ul class="spec-list">
+                            <li><i class="fas fa-check"></i> Ultra-Low Latency Processing</li>
+                            <li><i class="fas fa-check"></i> 99.5% Detection Accuracy</li>
+                            <li><i class="fas fa-check"></i> Scalable Architecture</li>
+                            <li><i class="fas fa-check"></i> 24/7 Continuous Monitoring</li>
+                            <li><i class="fas fa-check"></i> High Availability Design</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="spec-card">
+                        <h5>Security & Compliance</h5>
+                        <ul class="spec-list">
+                            <li><i class="fas fa-check"></i> End-to-End Encryption</li>
+                            <li><i class="fas fa-check"></i> GDPR Compliance</li>
+                            <li><i class="fas fa-check"></i> Audit Trail Logging</li>
+                            <li><i class="fas fa-check"></i> Role-Based Access Control</li>
+                            <li><i class="fas fa-check"></i> Data Privacy Protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integration-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Easy Integration</h2>
+                <p>Seamlessly integrate Safe City with your existing security infrastructure</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h5>CCTV Systems</h5>
+                        <p>Compatible with all major CCTV brands and models</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h5>RTSP Streams</h5>
+                        <p>Direct integration via RTSP protocol</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h5>Cloud Platform</h5>
+                        <p>Cloud-based deployment and management</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="integration-card">
+                        <div class="integration-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5>Mobile Apps</h5>
+                        <p>iOS and Android applications available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+            <h2>Ready to Experience Safe City?</h2>
+            <p>Transform your security infrastructure with AI-powered intelligence and real-time threat detection</p>
+            <div class="hero-buttons">
+                <a href="quote.html" class="modern-btn modern-btn-secondary">
+                    <i class="fas fa-rocket"></i>Request Demo
+                </a>
+                <a href="contact.html" class="modern-btn modern-btn-primary">
+                    <i class="fas fa-phone"></i>Contact Sales
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Common Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Demo Video Modal -->
+    <div class="modal fade" id="demoModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-white">Safe City Software Demo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="demo-video-container">
+                        <iframe 
+                            id="demoVideo"
+                            width="100%" 
+                            height="100%" 
+                            src="" 
+                            title="Safe City Software Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Common Components Loader -->
+    <script src="js/inline-header-footer.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Demo video functions
+        function playDemo() {
+            const modal = new bootstrap.Modal(document.getElementById('demoModal'));
+            const video = document.getElementById('demoVideo');
+            
+            // Replace with actual Safe City demo video URL
+            video.src = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0';
+            
+            modal.show();
+            
+            // Clear video when modal closes
+            document.getElementById('demoModal').addEventListener('hidden.bs.modal', function() {
+                video.src = '';
+            });
+        }
+
+        function scrollToDemo() {
+            document.getElementById('demo-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

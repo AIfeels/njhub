@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>NJ Visiony Hub</title>
+    <title>AI Security Projects & Case Studies | NJ Visiony Hub</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="AI security projects, Safe City implementations, CCTV analysis case studies, security system deployments, smart surveillance projects" name="keywords">
+    <meta content="Explore our successful AI-powered security projects and Safe City software implementations. Real-world case studies showcasing intelligent CCTV analysis and threat detection solutions." name="description">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NJ Visiony Hub">
+    <meta property="og:title" content="AI Security Projects & Case Studies">
+    <meta property="og:description" content="Successful AI-powered security projects and Safe City implementations">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.njvisionyhub.in/project.html">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,313 +21,862 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Project Styles -->
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 12px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f8fafc;
+            padding-top: 80px;
+        }
+
+        .page-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/portfolio-1.jpg') center/cover;
+            opacity: 0.2;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb-modern {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb-modern a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .breadcrumb-modern a:hover {
+            color: white;
+        }
+
+        .projects-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            background: white;
+            color: #64748b;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid #f1f5f9;
+            margin-bottom: 2rem;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-action {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .project-action:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: var(--success-gradient);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .project-description {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features li {
+            padding: 0.25rem 0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .project-features li i {
+            color: #4facfe;
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .project-stats {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .project-stat {
+            text-align: center;
+        }
+
+        .project-stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #667eea;
+        }
+
+        .project-stat-label {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .case-study-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .case-study-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #f1f5f9;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-gradient);
+            color: white;
+            font-size: 24px;
+            margin-right: 1.5rem;
+        }
+
+        .case-study-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        .case-study-info p {
+            color: #64748b;
+            margin: 0;
+        }
+
+        .case-study-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: var(--border-radius);
+        }
+
+        .metric-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--dark-gradient);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .modern-btn {
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modern-btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .modern-btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+            color: white;
+        }
+
+        .modern-btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid white;
+        }
+
+        .modern-btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .project-content {
+                padding: 1.5rem;
+            }
+            
+            .case-study-card {
+                padding: 2rem;
+            }
+            
+            .case-study-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .case-study-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .modern-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
+    <!-- Include Common Header -->
+    <div id="header-placeholder"></div>
 
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5">
-        <div class="row gx-4 d-none d-lg-flex">
-            <div class="col-lg-6 text-start">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="fa fa-map-marker-alt text-white"></small>
-                    </div>
-                    <small>C-113 Tigri Extension New Delhi 110062</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="fa fa-envelope-open text-white"></small>
-                    </div>
-                    <small>mjishan736@gmail.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="fa fa-phone-alt text-white"></small>
-                    </div>
-                    <small>+91 639 616 8575</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <div class="btn-sm-square rounded-circle bg-primary me-2">
-                        <small class="far fa-clock text-white"></small>
-                    </div>
-                    <small>24*7 Open</small>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="container">
+                <h1 class="page-title" data-aos="fade-up">Our Projects</h1>
+                <div class="breadcrumb-modern" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Projects</span>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Topbar End -->
+    </section>
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h2 class="m-0 text-primary">NJ Visiony Hub</h2>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-4 py-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="project.html" class="nav-item nav-link active">Project</a>
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div> -->
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Projects</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Projects</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Projects Start -->
-    <div class="container-xxl py-5">
+    <!-- Projects Section -->
+    <section class="projects-section">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
-                <h1 class="display-5 mb-5">Our Projects</h1>
+            <div class="section-title" data-aos="fade-up">
+                <h2>AI Security Implementations</h2>
+                <p>Explore our successful Safe City software deployments and AI-powered security solutions across various industries</p>
             </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">Complete Projects</li>
-                        <li class="mx-2" data-filter=".second">Ongoing Projects</li>
-                    </ul>
-                </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="retail">Retail</button>
+                <button class="filter-btn" data-filter="manufacturing">Manufacturing</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="government">Government</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
             </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="text-center p-4">
-                            <p class="text-primary mb-2">Business Security</p>
-                            <h5 class="lh-base mb-0">Smart CCTV Security Systems That Fits Your Business</h5>
+
+            <!-- Projects Grid -->
+            <div class="row" id="projectsGrid">
+                <!-- Retail Project -->
+                <div class="col-lg-4 col-md-6 project-item retail" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/portfolio-1.jpg" alt="Smart Mall Security">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="img/portfolio-1.jpg" class="project-action" data-lightbox="projects">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="project-action" onclick="showProjectDetails('retail-mall')">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">Business Security</p>
-                            <h5 class="lh-base mb-3">Smart CCTV Security Systems That Fits Your Business</h5>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        <div class="project-content">
+                            <span class="project-category">Retail Security</span>
+                            <h4 class="project-title">Smart Mall Security System</h4>
+                            <p class="project-description">AI-powered security implementation for a major shopping mall with 50+ cameras, real-time threat detection, and crowd management.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Fire detection & smoke alerts</li>
+                                <li><i class="fas fa-check"></i> Crowd density monitoring</li>
+                                <li><i class="fas fa-check"></i> Theft prevention system</li>
+                                <li><i class="fas fa-check"></i> Mobile app integration</li>
+                            </ul>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-number">50+</div>
+                                    <div class="project-stat-label">Cameras</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">99.2%</div>
+                                    <div class="project-stat-label">Accuracy</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">24/7</div>
+                                    <div class="project-stat-label">Monitoring</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                        <div class="text-center p-4">
-                            <p class="text-primary mb-2">Fire Detection</p>
-                            <h5 class="lh-base mb-0">Smart CCTV Security Systems That Fits Your Business</h5>
+
+                <!-- Manufacturing Project -->
+                <div class="col-lg-4 col-md-6 project-item manufacturing" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/portfolio-2.jpg" alt="Industrial Fire Safety">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="img/portfolio-2.jpg" class="project-action" data-lightbox="projects">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="project-action" onclick="showProjectDetails('manufacturing-plant')">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">Fire Detection</p>
-                            <h5 class="lh-base mb-3">Smart CCTV Security Systems That Fits Your Business</h5>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        <div class="project-content">
+                            <span class="project-category">Industrial Safety</span>
+                            <h4 class="project-title">Manufacturing Plant Fire Safety</h4>
+                            <p class="project-description">Advanced fire detection system for a chemical manufacturing facility with instant alerts and automated response protocols.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Chemical fire detection</li>
+                                <li><i class="fas fa-check"></i> Instant WhatsApp alerts</li>
+                                <li><i class="fas fa-check"></i> Safety compliance monitoring</li>
+                                <li><i class="fas fa-check"></i> Emergency response integration</li>
+                            </ul>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-number">30</div>
+                                    <div class="project-stat-label">Cameras</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">99.8%</div>
+                                    <div class="project-stat-label">Accuracy</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">2s</div>
+                                    <div class="project-stat-label">Response</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="text-center p-4">
-                            <p class="text-primary mb-2">Access Control</p>
-                            <h5 class="lh-base mb-0">Smart CCTV Security Systems That Fits Your Business</h5>
+
+                <!-- Education Project -->
+                <div class="col-lg-4 col-md-6 project-item education" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/portfolio-3.jpg" alt="Campus Security">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="img/portfolio-3.jpg" class="project-action" data-lightbox="projects">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="project-action" onclick="showProjectDetails('campus-security')">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">Access Control</p>
-                            <h5 class="lh-base mb-3">Smart CCTV Security Systems That Fits Your Business</h5>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        <div class="project-content">
+                            <span class="project-category">Campus Security</span>
+                            <h4 class="project-title">University Campus Protection</h4>
+                            <p class="project-description">Comprehensive security solution for a university campus with student safety monitoring and access control integration.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Student safety monitoring</li>
+                                <li><i class="fas fa-check"></i> Access control integration</li>
+                                <li><i class="fas fa-check"></i> Incident reporting system</li>
+                                <li><i class="fas fa-check"></i> Parent notification alerts</li>
+                            </ul>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-number">80</div>
+                                    <div class="project-stat-label">Cameras</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">5000+</div>
+                                    <div class="project-stat-label">Students</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">15</div>
+                                    <div class="project-stat-label">Buildings</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                        <div class="text-center p-4">
-                            <p class="text-primary mb-2">Alarm Systems</p>
-                            <h5 class="lh-base mb-0">Smart CCTV Security Systems That Fits Your Business</h5>
+
+                <!-- Government Project -->
+                <div class="col-lg-4 col-md-6 project-item government" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/portfolio-4.jpg" alt="Smart City Initiative">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="img/portfolio-4.jpg" class="project-action" data-lightbox="projects">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="project-action" onclick="showProjectDetails('smart-city')">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">Alarm Systems</p>
-                            <h5 class="lh-base mb-3">Smart CCTV Security Systems That Fits Your Business</h5>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        <div class="project-content">
+                            <span class="project-category">Smart City</span>
+                            <h4 class="project-title">Municipal Smart City Initiative</h4>
+                            <p class="project-description">City-wide Safe City implementation with traffic monitoring, public safety, and emergency response coordination.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Traffic flow analysis</li>
+                                <li><i class="fas fa-check"></i> Public safety monitoring</li>
+                                <li><i class="fas fa-check"></i> Emergency response coordination</li>
+                                <li><i class="fas fa-check"></i> Crime prevention analytics</li>
+                            </ul>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-number">200+</div>
+                                    <div class="project-stat-label">Cameras</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">50km²</div>
+                                    <div class="project-stat-label">Coverage</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">100K+</div>
+                                    <div class="project-stat-label">Citizens</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="text-center p-4">
-                            <p class="text-primary mb-2">CCTV & Video</p>
-                            <h5 class="lh-base mb-0">Smart CCTV Security Systems That Fits Your Business</h5>
+
+                <!-- Healthcare Project -->
+                <div class="col-lg-4 col-md-6 project-item healthcare" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/portfolio-5.jpg" alt="Hospital Security">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="img/portfolio-5.jpg" class="project-action" data-lightbox="projects">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="project-action" onclick="showProjectDetails('hospital-security')">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">CCTV & Video</p>
-                            <h5 class="lh-base mb-3">Smart CCTV Security Systems That Fits Your Business</h5>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        <div class="project-content">
+                            <span class="project-category">Healthcare Security</span>
+                            <h4 class="project-title">Multi-Specialty Hospital</h4>
+                            <p class="project-description">Advanced security system for a 500-bed hospital with patient safety monitoring and restricted area access control.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Patient safety monitoring</li>
+                                <li><i class="fas fa-check"></i> Restricted area protection</li>
+                                <li><i class="fas fa-check"></i> Medical equipment security</li>
+                                <li><i class="fas fa-check"></i> Staff safety alerts</li>
+                            </ul>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-number">120</div>
+                                    <div class="project-stat-label">Cameras</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">500</div>
+                                    <div class="project-stat-label">Beds</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">8</div>
+                                    <div class="project-stat-label">Floors</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                        <div class="text-center p-4">
-                            <p class="text-primary mb-2">Smart Home</p>
-                            <h5 class="lh-base mb-0">Smart CCTV Security Systems That Fits Your Business</h5>
+
+                <!-- Retail Chain Project -->
+                <div class="col-lg-4 col-md-6 project-item retail" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/portfolio-6.jpg" alt="Retail Chain Security">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="img/portfolio-6.jpg" class="project-action" data-lightbox="projects">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="project-action" onclick="showProjectDetails('retail-chain')">
+                                        <i class="fas fa-info"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">Smart Home</p>
-                            <h5 class="lh-base mb-3">Smart CCTV Security Systems That Fits Your Business</h5>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+                        <div class="project-content">
+                            <span class="project-category">Multi-Location Retail</span>
+                            <h4 class="project-title">Retail Chain Centralized Security</h4>
+                            <p class="project-description">Centralized Safe City platform managing security across 25 retail locations with unified monitoring and reporting.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> Multi-location management</li>
+                                <li><i class="fas fa-check"></i> Centralized monitoring</li>
+                                <li><i class="fas fa-check"></i> Theft prevention analytics</li>
+                                <li><i class="fas fa-check"></i> Performance reporting</li>
+                            </ul>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-number">25</div>
+                                    <div class="project-stat-label">Locations</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">300+</div>
+                                    <div class="project-stat-label">Cameras</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-number">1</div>
+                                    <div class="project-stat-label">Dashboard</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Projects End -->
-        
+    </section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-secondary footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>C-113 Tigri Extension New Delhi 110062</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 639 616 8575</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mjishan736@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Business Security</a>
-                    <a class="btn btn-link" href="">Fire Detection</a>
-                    <a class="btn btn-link" href="">Alarm Systems</a>
-                    <a class="btn btn-link" href="">CCTV & Video</a>
-                    <a class="btn btn-link" href="">Smart Home</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>"Stay updated with the latest security trends and exclusive offers!"</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid py-4" style="background: #000000;">
+    <!-- Case Study Section -->
+    <section class="case-study-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">NJ Visiony Hub</a>, All Right Reserved.
+            <div class="section-title" data-aos="fade-up">
+                <h2>Success Story</h2>
+                <p>Detailed case study of our most impactful Safe City implementation</p>
+            </div>
+
+            <div class="case-study-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="case-study-header">
+                    <div class="case-study-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="case-study-info">
+                        <h4>Metro Shopping Complex - Complete Security Transformation</h4>
+                        <p>How Safe City software reduced security incidents by 85% and improved response time by 90%</p>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://vigilanceops.com">VigilanceOps Infotech</a>
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5>Challenge</h5>
+                        <p>The Metro Shopping Complex faced increasing security challenges with traditional CCTV systems that required constant manual monitoring. Security incidents were often detected too late, leading to significant losses and safety concerns for visitors.</p>
+
+                        <h5>Solution</h5>
+                        <p>We implemented our Safe City software with AI-powered threat detection, fire safety monitoring, and real-time alert systems. The solution included mobile app integration for security staff and automated incident reporting.</p>
+
+                        <h5>Results</h5>
+                        <p>Within 6 months of implementation, the complex saw dramatic improvements in security effectiveness, faster incident response, and enhanced visitor safety. The ROI was achieved in just 8 months.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="case-study-metrics">
+                            <div class="metric-card">
+                                <div class="metric-number">85%</div>
+                                <div class="metric-label">Incident Reduction</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-number">90%</div>
+                                <div class="metric-label">Faster Response</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-number">8</div>
+                                <div class="metric-label">Months ROI</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-number">99.5%</div>
+                                <div class="metric-label">Uptime</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Copyright End -->
+    </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container" data-aos="fade-up">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Join our growing list of successful implementations and transform your security infrastructure with AI</p>
+            <div class="cta-buttons">
+                <a href="quote.html" class="modern-btn modern-btn-secondary">
+                    <i class="fas fa-rocket"></i>Request Demo
+                </a>
+                <a href="contact.html" class="modern-btn modern-btn-primary">
+                    <i class="fas fa-phone"></i>Discuss Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include Common Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -332,9 +888,60 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+    
+    <!-- Common Components Loader -->
+    <script src="js/inline-header-footer.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
 
+        // Project filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectItems = document.querySelectorAll('.project-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter projects
+                    projectItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Project details modal (placeholder function)
+        function showProjectDetails(projectId) {
+            alert(`Detailed information about ${projectId} project would be displayed in a modal. This feature can be implemented with more detailed project data.`);
+        }
+    </script>
+</body>
 </html>

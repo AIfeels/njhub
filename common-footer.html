@@ -1,0 +1,767 @@
+<!-- Enhanced Modern Footer Component -->
+<style>
+    :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --dark-gradient: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+        --shadow-medium: 0 12px 40px rgba(0, 0, 0, 0.15);
+        --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.2);
+        --border-radius: 16px;
+        --border-radius-lg: 24px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Enhanced Modern Footer Styles */
+    .modern-footer {
+        background: var(--dark-gradient);
+        color: #e2e8f0;
+        position: relative;
+        overflow: hidden;
+        margin-top: auto;
+    }
+
+    .modern-footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        opacity: 0.3;
+        animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(10px, 10px); }
+    }
+
+    .footer-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .footer-section h5 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        color: #f7fafc;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .footer-section h5::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--primary-gradient);
+        border-radius: 2px;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+        from { box-shadow: 0 0 5px rgba(102, 126, 234, 0.5); }
+        to { box-shadow: 0 0 20px rgba(102, 126, 234, 0.8); }
+    }
+
+    .footer-link {
+        color: #cbd5e0;
+        text-decoration: none;
+        padding: 0.5rem 0;
+        display: block;
+        transition: var(--transition);
+        font-weight: 400;
+        position: relative;
+    }
+
+    .footer-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary-gradient);
+        transition: width 0.3s ease;
+    }
+
+    .footer-link:hover::before {
+        width: 100%;
+    }
+
+    .footer-link:hover {
+        color: #667eea;
+        transform: translateX(5px);
+    }
+
+    .footer-contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        color: #cbd5e0;
+        transition: var(--transition);
+    }
+
+    .footer-contact-item:hover {
+        color: #f7fafc;
+        transform: translateX(5px);
+    }
+
+    .footer-contact-item i {
+        width: 20px;
+        margin-right: 12px;
+        color: #667eea;
+        transition: var(--transition);
+    }
+
+    .footer-contact-item:hover i {
+        color: #764ba2;
+        transform: scale(1.2);
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .footer-social-link {
+        width: 44px;
+        height: 44px;
+        background: rgba(102, 126, 234, 0.1);
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #667eea;
+        text-decoration: none;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-social-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-gradient);
+        transition: left 0.5s ease;
+    }
+
+    .footer-social-link:hover::before {
+        left: 0;
+    }
+
+    .footer-social-link:hover {
+        color: white;
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .footer-social-link i {
+        position: relative;
+        z-index: 1;
+    }
+
+    .newsletter-form {
+        position: relative;
+        margin-top: 1rem;
+    }
+
+    .newsletter-input {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        padding-right: 120px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        color: #f7fafc;
+        font-size: 0.95rem;
+        transition: var(--transition);
+    }
+
+    .newsletter-input::placeholder {
+        color: #a0aec0;
+    }
+
+    .newsletter-input:focus {
+        outline: none;
+        border-color: #667eea;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    }
+
+    .newsletter-btn {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--primary-gradient);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .newsletter-btn:hover {
+        transform: translateY(-50%) scale(1.05);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .footer-bottom {
+        background: rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 0;
+        margin-top: 3rem;
+    }
+
+    .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-copyright {
+        color: #a0aec0;
+        font-size: 0.9rem;
+    }
+
+    .footer-copyright a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+    .footer-copyright a:hover {
+        color: #764ba2;
+        text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    }
+
+    /* Enhanced Modern Badge */
+    .modern-badge {
+        background: var(--success-gradient);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 0.5rem;
+        box-shadow: var(--shadow-soft);
+        animation: badgePulse 3s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    /* Enhanced Chatbot Styles */
+    .chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10000;
+    }
+
+    .chatbot-toggle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: var(--shadow-medium);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .chatbot-toggle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+        animation: ripple 2s infinite;
+    }
+
+    @keyframes ripple {
+        0% { transform: scale(0); opacity: 1; }
+        100% { transform: scale(4); opacity: 0; }
+    }
+
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: var(--shadow-strong);
+    }
+
+    .pulse-animation {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .chatbot-window {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 350px;
+        height: 500px;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-strong);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .chatbot-header {
+        background: var(--primary-gradient);
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .chatbot-header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+
+    .chatbot-messages {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        background: #f8f9fa;
+    }
+
+    .chatbot-input {
+        padding: 15px;
+        border-top: 1px solid #eee;
+        display: flex;
+        gap: 10px;
+        background: white;
+    }
+
+    .message {
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        border-radius: 15px;
+        max-width: 80%;
+        animation: messageSlide 0.3s ease-out;
+    }
+
+    @keyframes messageSlide {
+        from { transform: translateY(10px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .message.user {
+        background: #667eea;
+        color: white;
+        margin-left: auto;
+    }
+
+    .message.bot {
+        background: white;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            justify-content: center;
+        }
+
+        .footer-bottom-content {
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .newsletter-input {
+            padding-right: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-btn {
+            position: static;
+            transform: none;
+            width: 100%;
+        }
+
+        .chatbot-window {
+            width: 300px;
+            height: 400px;
+        }
+
+        .chatbot-container {
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+
+    /* Back to Top Button Enhancement */
+    .back-to-top {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary-gradient);
+        color: white;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        box-shadow: var(--shadow-medium);
+        transition: var(--transition);
+        z-index: 9999;
+    }
+
+    .back-to-top:hover {
+        transform: translateY(-3px) scale(1.1);
+        box-shadow: var(--shadow-strong);
+        color: white;
+    }
+
+    .back-to-top.show {
+        display: flex;
+        animation: fadeInUp 0.3s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+</style>
+
+<!-- Enhanced Modern Footer -->
+<footer class="modern-footer">
+    <div class="container">
+        <div class="footer-content py-5">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>NJ Visiony Hub</h5>
+                        <p class="mb-4" style="color: #cbd5e0; line-height: 1.7;">
+                            Revolutionizing security with AI-powered Safe City software. Transform your CCTV infrastructure into intelligent security networks with real-time threat detection and instant alerts.
+                        </p>
+                        
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>C-113 Tigri Extension, New Delhi 110062</span>
+                        </div>
+                        
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 639 616 8575</span>
+                        </div>
+                        
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mdjishan736@gmail.com</span>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link" title="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer-social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="footer-social-link" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer-social-link" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h5>Services</h5>
+                        <a href="service.html" class="footer-link">Smart Analytics</a>
+                        <a href="safe-city.html" class="footer-link">Safe City Software</a>
+                        <a href="service.html" class="footer-link">Fire Detection</a>
+                        <a href="service.html" class="footer-link">Object Recognition</a>
+                        <a href="service.html" class="footer-link">System Integration</a>
+                        <a href="service.html" class="footer-link">Compliance Monitoring</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h5>Quick Links</h5>
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                        <a href="project.html" class="footer-link">Our Projects</a>
+                        <a href="quote.html" class="footer-link">Get Quote</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h5>Stay Updated</h5>
+                        <p style="color: #cbd5e0; margin-bottom: 1rem;">
+                            Get the latest updates on AI security innovations and Safe City features directly in your inbox.
+                        </p>
+                        
+                        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                            <input 
+                                type="email" 
+                                class="newsletter-input" 
+                                placeholder="Enter your email address"
+                                required
+                            >
+                            <button type="submit" class="newsletter-btn">
+                                Subscribe
+                            </button>
+                        </form>
+
+                        <div class="modern-badge mt-3">
+                            <i class="fas fa-shield-alt me-2"></i>
+                            24/7 Security Monitoring
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-copyright">
+                    &copy; 2024 <a href="index.html">NJ Visiony Hub</a>. All rights reserved.
+                </div>
+                <div class="footer-copyright">
+                    Designed by <a href="https://vigilanceops.com" target="_blank">VigilanceOps Infotech</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Enhanced Hindi Chatbot -->
+<div class="chatbot-container">
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <i class="fas fa-robot me-2"></i>
+            सुरक्षा सहायक (Security Assistant)
+            <button class="btn btn-sm btn-light float-end" onclick="toggleChatbot()" style="font-size: 0.8rem; padding: 0.25rem 0.5rem;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+                नमस्ते! मैं आपका AI सुरक्षा सहायक हूं। Safe City सॉफ्टवेयर के बारे में कोई भी सवाल पूछें।
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" class="form-control" id="chatInput" placeholder="अपना सवाल यहाँ लिखें..." onkeypress="handleKeyPress(event)">
+            <button class="btn btn-primary" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <button class="chatbot-toggle pulse-animation" onclick="toggleChatbot()" title="सुरक्षा सहायक">
+        <i class="fas fa-comments"></i>
+    </button>
+</div>
+
+<!-- Enhanced Back to Top Button -->
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<script>
+    // Enhanced Newsletter subscription
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        const email = event.target.querySelector('input[type="email"]').value;
+        
+        // Show loading state
+        const btn = event.target.querySelector('.newsletter-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Subscribing...';
+        btn.disabled = true;
+        
+        // Simulate API call
+        setTimeout(() => {
+            alert('धन्यवाद! आपको Safe City सॉफ्टवेयर और सुरक्षा नवाचारों के बारे में अपडेट मिलते रहेंगे।');
+            event.target.reset();
+            btn.textContent = originalText;
+            btn.disabled = false;
+        }, 1000);
+    }
+
+    // Enhanced Hindi Chatbot functionality
+    const chatbotResponses = {
+        'safe city': 'Safe City हमारा smart security सॉफ्टवेयर है जो CCTV फुटेज का real-time विश्लेषण करता है। यह आग, चोरी, और अन्य खतरों का तुरंत पता लगाता है।',
+        'सुरक्षा': 'हमारी smart तकनीक आग, चोरी, और अन्य खतरों का तुरंत पता लगाती है। WhatsApp और Email पर instant alerts भेजती है।',
+        'कीमत': 'हमारे subscription plans ₹5,000 से शुरू होते हैं। विस्तृत जानकारी के लिए demo बुक करें या +91 639 616 8575 पर कॉल करें।',
+        'demo': 'Free demo के लिए हमारे contact form भरें या +91 639 616 8575 पर कॉल करें। आप हमारी website पर "Watch Demo" button भी दबा सकते हैं।',
+        'whatsapp': 'हाँ, हमारा सिस्टम WhatsApp और Email पर तुरंत alerts भेजता है। Video clips के साथ detailed incident reports भी मिलती हैं।',
+        'fire': 'हमारा fire detection system 99.5% accuracy के साथ आग और धुआं detect करता है। 2 seconds में alert भेज देता है।',
+        'contact': 'संपर्क: +91 639 616 8575, Email: mdjishan736@gmail.com, Address: C-113 Tigri Extension New Delhi 110062',
+        'about': 'NJ Visiony Hub एक smart security company है जो Safe City software बनाती है। हम AI और machine learning का उपयोग करके security solutions प्रदान करते हैं।',
+        'features': 'Safe City के मुख्य features: Fire Detection, Object Recognition, Real-time Alerts, Mobile App, RTSP Integration, Compliance Monitoring',
+        'price': 'Starter Plan: ₹5,000/month (5 cameras), Professional: ₹15,000/month (20 cameras), Enterprise: Custom pricing',
+        'default': 'मुझे खुशी होगी आपकी मदद करने में! आप Safe City, pricing, demo, features, या contact के बारे में पूछ सकते हैं।'
+    };
+
+    function toggleChatbot() {
+        const chatWindow = document.getElementById('chatbotWindow');
+        const isVisible = chatWindow.style.display === 'flex';
+        
+        if (isVisible) {
+            chatWindow.style.animation = 'slideDown 0.3s ease-out';
+            setTimeout(() => {
+                chatWindow.style.display = 'none';
+            }, 300);
+        } else {
+            chatWindow.style.display = 'flex';
+            chatWindow.style.animation = 'slideUp 0.3s ease-out';
+        }
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('chatInput');
+        const message = input.value.trim();
+        if (message) {
+            addMessage(message, 'user');
+            input.value = '';
+            
+            // Show typing indicator
+            addTypingIndicator();
+            
+            setTimeout(() => {
+                removeTypingIndicator();
+                const response = getBotResponse(message);
+                addMessage(response, 'bot');
+            }, 1500);
+        }
+    }
+
+    function addMessage(text, sender) {
+        const messagesContainer = document.getElementById('chatbotMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}`;
+        messageDiv.textContent = text;
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function addTypingIndicator() {
+        const messagesContainer = document.getElementById('chatbotMessages');
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'message bot typing-indicator';
+        typingDiv.innerHTML = '<span>टाइप कर रहा है...</span>';
+        typingDiv.id = 'typingIndicator';
+        messagesContainer.appendChild(typingDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+        const typingIndicator = document.getElementById('typingIndicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+    }
+
+    function getBotResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        for (const [key, response] of Object.entries(chatbotResponses)) {
+            if (lowerMessage.includes(key)) {
+                return response;
+            }
+        }
+        
+        return chatbotResponses.default;
+    }
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    }
+
+    // Enhanced Back to Top functionality
+    window.addEventListener('scroll', function() {
+        const backToTop = document.getElementById('backToTop');
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Initialize chatbot with welcome message after page load
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+            if (document.getElementById('chatbotMessages').children.length === 1) {
+                addMessage('मैं आपकी Safe City software के बारे में जानकारी देने के लिए यहाँ हूं। कुछ भी पूछें!', 'bot');
+            }
+        }, 2000);
+    });
+</script>

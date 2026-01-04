@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe City Software Demo - Hindi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .demo-container {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4facfe;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="logo floating">🛡️</div>
+        <h1 class="title">Safe City Software</h1>
+        <p class="subtitle">AI-Powered Security Solutions | AI-संचालित सुरक्षा समाधान</p>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔥</div>
+                <h3>Fire Detection</h3>
+                <p>आग का पता लगाना</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👁️</div>
+                <h3>Smart Analytics</h3>
+                <p>स्मार्ट विश्लेषण</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Alerts</h3>
+                <p>मोबाइल अलर्ट</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-time Monitoring</h3>
+                <p>रियल-टाइम निगरानी</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <h3>Free Demo Available | निःशुल्क डेमो उपलब्ध</h3>
+            <div class="phone">📞 +91 639 616 8575</div>
+            <p>🌐 www.njvisionyhub.in</p>
+            <p>📧 mdjishan736@gmail.com</p>
+        </div>
+
+        <p style="margin-top: 2rem; opacity: 0.8;">
+            <strong>Hindi Demo Video Coming Soon!</strong><br>
+            हिंदी डेमो वीडियो जल्द आ रहा है!
+        </p>
+    </div>
+
+    <script>
+        // Auto-redirect after 10 seconds (optional)
+        setTimeout(() => {
+            if (window.parent !== window) {
+                // If in iframe, close modal
+                window.parent.postMessage('closeDemoModal', '*');
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
